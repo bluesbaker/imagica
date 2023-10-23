@@ -78,8 +78,8 @@ func main() {
 	ramp := "@%#+=-. "
 
 	// print using ASCII
-	for y := 0; y < imgConfig.Height; y += row {
-		for x := 0; x < imgConfig.Width; x += col {
+	for y := 0; y < height; y += row {
+		for x := 0; x < width; x += col {
 			grs := grayscale(img.At(x, y))
 			fmt.Printf("%s", string(ramp[len(ramp)*grs/65536]))
 		}
