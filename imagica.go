@@ -80,8 +80,8 @@ func main() {
 	// print using ASCII
 	for y := 0; y < height; y += row {
 		for x := 0; x < width; x += col {
-			grs := grayscale(img.At(x, y))
-			fmt.Printf("%s", string(ramp[len(ramp)*grs/65536]))
+			gs := grayscale(img.At(x, y))
+			fmt.Printf("%s", string(ramp[len(ramp)*gs/65536]))
 		}
 		fmt.Println()
 	}
